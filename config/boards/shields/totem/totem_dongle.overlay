@@ -5,11 +5,6 @@
  */
 
 #include <dt-bindings/zmk/matrix_transform.h>
-#include "totem.dtsi"
-
-&physical_layout0 {
-    transform = <&default_transform>;
-};
 
 / {
     chosen {
@@ -38,5 +33,11 @@
         RC(3,0) RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4)    RC(2,5) RC(2,6) RC(2,7) RC(2,8) RC(2,9) RC(3,9)
                                 RC(3,2) RC(3,3) RC(3,4)    RC(3,5) RC(3,6) RC(3,7)         
         >;
+    };
+
+    physical_layout0: physical_layout_0 {
+        compatible = "zmk,physical-layout";
+        display-name = "Default Layout";
+        transform = <&default_transform>;
     };
 };
