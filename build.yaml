@@ -7,5 +7,4 @@ include:
     cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
   - board: seeeduino_xiao_ble
     shield: totem_dongle
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
 # there is no settingsreset (needed) for the XIAO
