@@ -12,6 +12,12 @@ config ZMK_SPLIT_ROLE_CENTRAL
 config ZMK_USB
     default y
 
+config CONFIG_ZMK_BATTERY_REPORTING
+    default y
+
+config CONFIG_ZMK_BATTERY_REPORT_INTERVAL
+    default 60
+
 endif
 
 if SHIELD_TOTEM_LEFT || SHIELD_TOTEM_RIGHT || SHIELD_TOTEM_DONGLE
@@ -20,6 +26,16 @@ config ZMK_SPLIT
     default y
 
 config ZMK_BLE
+    default y
+
+endif
+
+if SHIELD_TOTEM_LEFT || SHIELD_TOTEM_RIGHT
+
+config CONFIG_ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_PROXY
+    default y
+
+config CONFIG_ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_FETCHING
     default y
 
 endif
